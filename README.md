@@ -82,17 +82,11 @@ The perception node processes camera images in real time to isolate and track th
 1️⃣ **Clone the repository**
 
 ```bash
-cd ~/catkin_ws/src
-git clone https://github.com/YourUsername/ros-object-tracking-robot.git
+cd ~/catkin_ws
+git clone https://github.com/Mohammed-Ihab/ros-object-tracking-mobile-robot.git
 ```
 
-2️⃣ **Install dependencies**
-
-```bash
-rosdep install --from-paths src --ignore-src -r -y
-```
-
-3️⃣ **Build the workspace**
+2️⃣ **Build the workspace**
 
 ```bash
 cd ~/catkin_ws
@@ -107,13 +101,13 @@ source devel/setup.bash
 ### Run in Simulation
 
 ```bash
-roslaunch your_package_name simulation.launch
+roslaunch bringup sim_bringup.launch
 ```
 
 ### Run on Real Robot
 
 ```bash
-roslaunch your_package_name hardware.launch
+roslaunch bringup rs_bringup.launch
 ```
 
 Ensure the Arduino, camera, and motor drivers are properly connected before launching the hardware configuration.
