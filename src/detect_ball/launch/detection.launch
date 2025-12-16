@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+  <node pkg="detect_ball" type="sim_contour_detection.py" name="contour_detection" />
+  <node pkg="detect_ball" type="ball_move.py" name="ball_move" />
+
+</launch>
