@@ -165,9 +165,7 @@ ros-object-tracking-robot/src/
 
 ## Future Improvements
 
-* Sensor fusion with IMU and wheel odometry
-* Adaptive or learning-based control
-* Dynamic obstacle avoidance
-* Multi-object tracking support
+* Weight Reduction
+* Environmental Sensing and Obstacle Avoidance
 
 ---
