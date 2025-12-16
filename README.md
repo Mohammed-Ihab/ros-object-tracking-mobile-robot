@@ -1,5 +1,7 @@
 # ROS Object Tracking Mobile Robot
 
+![Simulation Demo](img/sim.gif)
+
 A **robust, real-time computer vision–based navigation system** for a four-wheeled mobile robot. This project demonstrates the tight integration of **perception, decision-making, and control** using the **Robot Operating System (ROS)**, validated both in simulation and on a real hardware prototype.
 
 ---
