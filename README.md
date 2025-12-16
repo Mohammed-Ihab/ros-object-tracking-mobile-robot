@@ -114,6 +114,55 @@ Ensure the Arduino, camera, and motor drivers are properly connected before laun
 
 ---
 
+## Project Folder Structure
+
+```text
+ros-object-tracking-robot/src/
+├── bringup/
+│   ├── launch/
+│   │   ├── sim_bringup.launch
+│   │   └── rs_bringup.launch
+│   ├── CMakeLists.txt
+│   └── package.xml
+│
+├── detect_ball/
+│   ├── scripts/
+│   │   ├── ball_move.py
+│   │   ├── rs_contour_detection.py 
+│   │   ├── rs_hough_detection.py
+│   │   ├── sim_contour_detection.py
+│   │   └── sim_hough_detection.py
+│   ├── launch/
+│   │   └── detection.launch
+│   ├── CMakeLists.txt
+│   └── package.xml
+│
+├── robot_control/
+│   ├── launch/
+│   │   ├── arduino.launch
+│   │   └── sim_control.launch
+│   ├── scripts/
+│   │   ├── rs_vel_controller.py
+│   │   └── sim_vel_controller.py
+│   ├── CMakeLists.txt
+│   └── package.xml
+│
+├── robot_description/
+│   ├── urdf/
+│   │   ├── four_wheel.xacro
+│   │   └── four_wheel.gazebo
+│   ├── launch/
+│   │   └── empty_world.launch
+│   ├── worlds/
+│   │   └── four_wheel_env.world
+│   ├── CMakeLists.txt
+│   └── package.xml
+│
+└── CMakeLists.txt
+```
+
+---
+
 ## Future Improvements
 
 * Sensor fusion with IMU and wheel odometry
