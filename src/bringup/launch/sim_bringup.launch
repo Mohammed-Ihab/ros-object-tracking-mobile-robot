@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+  <!-- Robot model -->
+  <include file="$(find robot_description)/launch/empty_world.launch"/>
+
+  <!-- Detection and ball node -->
+  <include file="$(find detect_ball)/launch/detection.launch"/>
+
+  <!-- Conrtol node -->
+  <include file="$(find robot_control)/launch/sim_control.launch"/>
+
+</launch>
+  
+  
