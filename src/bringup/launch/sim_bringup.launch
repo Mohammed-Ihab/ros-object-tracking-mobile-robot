@@ -2,15 +2,36 @@
 
 <launch>
 
-  <!-- Robot model -->
-  <include file="$(find robot_description)/launch/empty_world.launch"/>
+  <!-- ===================== -->
+  <!-- 1. RealSense Camera -->
+  <!-- ===================== -->
+  <include file="$(find robot_description)/launch/empty_world.launch" />
 
-  <!-- Detection and ball node -->
-  <include file="$(find detect_ball)/launch/detection.launch"/>
+  <!-- ===================== -->
+  <!-- 2. Ball Detection -->
+  <!-- ===================== -->
+  <node
+    pkg="detect_ball"
+    type="sim_contour_detection.py"
+    name="ball_detector"
+    output="screen" />
 
-  <!-- Conrtol node -->
-  <include file="$(find robot_control)/launch/sim_control.launch"/>
+  <!-- ===================== -->
+  <!-- 2. Ball Move -->
+  <!-- ===================== -->
+  <node
+    pkg="detect_ball"
+    type="ball_move.py"
+    name="ball_mover"
+    output="screen" />
+
+  <!-- ===================== -->
+  <!-- 4. Robot velocity controller -->
+  <!-- ===================== -->
+  <node
+    pkg="robot_control"
+    type="sim_vel_controller.py"
+    name="vel_controller"
+    output="screen" />
 
 </launch>
-  
-  
