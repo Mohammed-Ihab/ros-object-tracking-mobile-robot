@@ -136,15 +136,12 @@ ros-object-tracking-robot/src/
 │   │   ├── rs_hough_detection.py
 │   │   ├── sim_contour_detection.py
 │   │   └── sim_hough_detection.py
-│   ├── launch/
-│   │   └── detection.launch
 │   ├── CMakeLists.txt
 │   └── package.xml
 │
 ├── robot_control/
 │   ├── launch/
-│   │   ├── arduino.launch
-│   │   └── sim_control.launch
+│   │   └── arduino.launch
 │   ├── scripts/
 │   │   ├── rs_vel_controller.py
 │   │   └── sim_vel_controller.py
@@ -171,5 +168,6 @@ ros-object-tracking-robot/src/
 
 * Weight Reduction
 * Environmental Sensing and Obstacle Avoidance
+* Using Encoders to take feedback about Wheel speed for closed loop control
 
 ---
